@@ -1,0 +1,254 @@
+/* Sass Document */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700')
+
+$bgcolor: #e5eaee
+$brone: #e1c184
+
+%small-bold
+	font:
+		size: 14px
+		weight: 800
+	text-transform: uppercase
+
+
+*
+	font-family: 'Open Sans', sans-serif
+	margin: 0
+	padding: 0
+
+header
+	height: 450px
+	background: url("../asset/430H.jpg") center center
+	background-size: cover
+	
+	.logo
+		float: left
+		margin: 10px 0 0 30px
+		
+		img
+			width: 50px
+			height: 50px
+
+	nav
+		float: right
+		margin: 30px 30px 0 0
+		a
+			display: inline-block
+			margin-left: 20px
+			color: rgba(0,0,0,0.7)
+			text-decoration: none
+			@extend %small-bold
+			&:hover
+				color: rgba(0,0,0,1)
+		
+	h1
+		text-align: center
+		font:
+			size: 72px
+			weight: 700
+		color: white
+		text-transform: uppercase
+		letter-spacing: 0.05em
+		margin-bottom: 20px
+		clear: both
+		padding-top: 100px
+		span
+			display: inline-block
+			padding: .2em .5em
+			border: 10px solid white
+
+	.kicker
+		text-align: center
+		@extend %small-bold
+		letter-spacing: 0.05em
+		color: white
+		line-height: 1
+
+/* Footer*/
+		
+footer
+	background: url("../asset/430H.jpg") center center
+	background-size: cover
+	
+	.lockup
+		padding: 50px 30px
+		
+		&:after
+			content: ""
+			display: block
+			clear: both	
+
+		.logo
+			float: left
+			margin-right: 30px
+
+			img
+				width: 50px
+				height: 50px
+	
+		.content-wrap
+			float: left
+			padding-top: 10px
+			
+			.copyright
+				margin: 0
+				text-transform: uppercase
+				font:
+					size: 12px
+					weight: 700
+				color: rgba(0,0,0,0.5)
+			a
+				@extend %small-bold
+				text-decoration: none
+				color: rgba(0,0,0,0.5)
+				display: inline-block
+				margin-right: 30px
+	
+				&:hover
+					color: rgba(0,0,0,0.7)
+			
+/* Face */
+
+h3
+	@extend %small-bold
+	color: $brone
+	text-align: center
+	padding-top: 100px
+
+.face-lockup
+	max-width: 780px
+	display: flex
+	margin: 0 auto
+	padding: 50px 0 30px
+	align-items: center
+	justify-content: space-around
+
+	.face-img
+		width: 200px
+		height: 200px
+		background: url("../asset/430H.jpg")
+		border-radius: 50%
+		order: 3
+
+	[class^="icon-"]
+		background: $bgcolor
+		border-radius: 50%
+		overflow: hidden
+		
+		img
+			width: 100px
+			height: 100px
+
+		&.icon-pencil
+			order: 1
+		&.icon-mouse
+			order: 2
+		&.icon-browser
+			order: 4
+		&.icon-video
+			order: 5
+
+@media screen and (max-width: 650px)
+	.face-lockup
+		display: block
+		text-align: center
+
+		div
+			display: inline-block
+		
+		.face-img
+			display: block
+			background-position: center center
+			background-repeat: no-repeat
+			margin: 0 auto 30px
+		[class^="icon-"]
+			margin: 10px
+			
+
+.blurb
+	max-width: 620px
+	padding: 0 15px
+	margin: 50px auto
+	font:
+		size: 24px
+		weight: 300
+	color: rgba(0,0,0,0.5)
+	text-align: center
+
+	strong
+		font-weight: 800
+	
+/* SKILL */
+
+.skill-lockup
+	max-width: 540px
+	margin: 50px auto
+	color: #999
+	
+	&:after
+		content: ""
+		display: block
+		clear: both
+	
+	.skill-unit
+		width: 270px
+		float: left
+	
+	.skill-icon
+		font-size: 0px
+		margin-bottom: 30px		
+
+		span
+			display: inline-block
+			width: 14px
+			height: 14px
+			background: $brone
+			margin-right: 5px
+			border-radius: 50%
+
+			&:after
+				content: ""
+				display: block
+				background: #fff
+				border-radius: 50%
+				width: 10px
+				height: 10px
+				margin: 2px
+
+		@for $i from 1 through 10
+			&.skill-#{$i} span:nth-child(n+#{$i+1})
+				@extend %skill-color
+
+//cho nay chi de cho file css gon hon trong tình huong dung vong lap
+%skill-color
+	background: #999
+
+@media screen and (max-width: 560px)
+	.skill-lockup
+		width: 270px
+
+
+/* LEARN */
+
+.alt-section
+	background: $bgcolor
+
+.thumb-container
+	max-width: 960px
+	margin: 0 auto
+	padding-bottom: 100px
+	
+	&:after
+		content: ""
+		display: block
+		clear: both
+	
+	.thumb-unit
+		display: block
+		float: left
+		width: 25%
+		height: 150px
+		background: pink
+
+
+	

@@ -1,0 +1,199 @@
+/* Sass Document */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+header nav a, header .kicker, footer .lockup .content-wrap a, h3 {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+header {
+  height: 450px;
+  background: url("../asset/430H.jpg") center center;
+  background-size: cover; }
+  header .logo {
+    float: left;
+    margin: 10px 0 0 30px; }
+    header .logo img {
+      width: 50px;
+      height: 50px; }
+  header nav {
+    float: right;
+    margin: 30px 30px 0 0; }
+    header nav a {
+      display: inline-block;
+      margin-left: 20px;
+      color: rgba(0, 0, 0, 0.7);
+      text-decoration: none; }
+      header nav a:hover {
+        color: black; }
+  header h1 {
+    text-align: center;
+    font-size: 72px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    clear: both;
+    padding-top: 100px; }
+    header h1 span {
+      display: inline-block;
+      padding: 0.2em 0.5em;
+      border: 10px solid white; }
+  header .kicker {
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: white;
+    line-height: 1; }
+
+/* Footer */
+footer {
+  background: url("../asset/430H.jpg") center center;
+  background-size: cover; }
+  footer .lockup {
+    padding: 50px 30px; }
+    footer .lockup:after {
+      content: "";
+      display: block;
+      clear: both; }
+    footer .lockup .logo {
+      float: left;
+      margin-right: 30px; }
+      footer .lockup .logo img {
+        width: 50px;
+        height: 50px; }
+    footer .lockup .content-wrap {
+      float: left;
+      padding-top: 10px; }
+      footer .lockup .content-wrap .copyright {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.5); }
+      footer .lockup .content-wrap a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        margin-right: 30px; }
+        footer .lockup .content-wrap a:hover {
+          color: rgba(0, 0, 0, 0.7); }
+
+/* Face */
+h3 {
+  color: #e1c184;
+  text-align: center;
+  padding-top: 100px; }
+
+.face-lockup {
+  max-width: 780px;
+  display: flex;
+  margin: 0 auto;
+  padding: 50px 0 30px;
+  align-items: center;
+  justify-content: space-around; }
+  .face-lockup .face-img {
+    width: 200px;
+    height: 200px;
+    background: url("../asset/430H.jpg");
+    border-radius: 50%;
+    order: 3; }
+  .face-lockup [class^="icon-"] {
+    background: #e5eaee;
+    border-radius: 50%;
+    overflow: hidden; }
+    .face-lockup [class^="icon-"] img {
+      width: 100px;
+      height: 100px; }
+    .face-lockup [class^="icon-"].icon-pencil {
+      order: 1; }
+    .face-lockup [class^="icon-"].icon-mouse {
+      order: 2; }
+    .face-lockup [class^="icon-"].icon-browser {
+      order: 4; }
+    .face-lockup [class^="icon-"].icon-video {
+      order: 5; }
+
+@media screen and (max-width: 650px) {
+  .face-lockup {
+    display: block;
+    text-align: center; }
+    .face-lockup div {
+      display: inline-block; }
+    .face-lockup .face-img {
+      display: block;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 0 auto 30px; }
+    .face-lockup [class^="icon-"] {
+      margin: 10px; } }
+.blurb {
+  max-width: 620px;
+  padding: 0 15px;
+  margin: 50px auto;
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center; }
+  .blurb strong {
+    font-weight: 800; }
+
+/* SKILL */
+.skill-lockup {
+  max-width: 540px;
+  margin: 50px auto;
+  color: #999; }
+  .skill-lockup:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .skill-lockup .skill-unit {
+    width: 270px;
+    float: left; }
+  .skill-lockup .skill-icon {
+    font-size: 0px;
+    margin-bottom: 30px; }
+    .skill-lockup .skill-icon span {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background: #e1c184;
+      margin-right: 5px;
+      border-radius: 50%; }
+      .skill-lockup .skill-icon span:after {
+        content: "";
+        display: block;
+        background: #fff;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        margin: 2px; }
+
+.skill-lockup .skill-icon.skill-1 span:nth-child(n+2), .skill-lockup .skill-icon.skill-2 span:nth-child(n+3), .skill-lockup .skill-icon.skill-3 span:nth-child(n+4), .skill-lockup .skill-icon.skill-4 span:nth-child(n+5), .skill-lockup .skill-icon.skill-5 span:nth-child(n+6), .skill-lockup .skill-icon.skill-6 span:nth-child(n+7), .skill-lockup .skill-icon.skill-7 span:nth-child(n+8), .skill-lockup .skill-icon.skill-8 span:nth-child(n+9), .skill-lockup .skill-icon.skill-9 span:nth-child(n+10), .skill-lockup .skill-icon.skill-10 span:nth-child(n+11) {
+  background: #999; }
+
+@media screen and (max-width: 560px) {
+  .skill-lockup {
+    width: 270px; } }
+/* LEARN */
+.alt-section {
+  background: #e5eaee; }
+
+.thumb-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 100px; }
+  .thumb-container:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .thumb-container .thumb-unit {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 150px;
+    background: pink; }
