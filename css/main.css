@@ -146,6 +146,7 @@ h3 {
 .skill-lockup {
   max-width: 540px;
   margin: 50px auto;
+  padding-left: 100px;
   color: #999; }
   .skill-lockup:after {
     content: "";
@@ -154,6 +155,8 @@ h3 {
   .skill-lockup .skill-unit {
     width: 270px;
     float: left; }
+  .skill-lockup .skill-label {
+    padding-bottom: 10px; }
   .skill-lockup .skill-icon {
     font-size: 0px;
     margin-bottom: 30px; }
@@ -176,9 +179,12 @@ h3 {
 .skill-lockup .skill-icon.skill-1 span:nth-child(n+2), .skill-lockup .skill-icon.skill-2 span:nth-child(n+3), .skill-lockup .skill-icon.skill-3 span:nth-child(n+4), .skill-lockup .skill-icon.skill-4 span:nth-child(n+5), .skill-lockup .skill-icon.skill-5 span:nth-child(n+6), .skill-lockup .skill-icon.skill-6 span:nth-child(n+7), .skill-lockup .skill-icon.skill-7 span:nth-child(n+8), .skill-lockup .skill-icon.skill-8 span:nth-child(n+9), .skill-lockup .skill-icon.skill-9 span:nth-child(n+10), .skill-lockup .skill-icon.skill-10 span:nth-child(n+11) {
   background: #999; }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 660px) {
   .skill-lockup {
-    width: 270px; } }
+    width: 240px;
+    padding-left: 0px; }
+    .skill-lockup .skill-unit {
+      width: 240px; } }
 /* LEARN */
 .alt-section {
   background: #e5eaee; }
@@ -186,7 +192,7 @@ h3 {
 .thumb-container {
   max-width: 960px;
   margin: 0 auto;
-  padding-bottom: 100px; }
+  padding: 50px 0 100px; }
   .thumb-container:after {
     content: "";
     display: block;
@@ -195,5 +201,38 @@ h3 {
     display: block;
     float: left;
     width: 25%;
-    height: 150px;
-    background: pink; }
+    position: relative;
+    padding-top: 16%;
+    overflow: hidden;
+    background-image: url("https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%; }
+    @media screen and (max-width: 760px) {
+      .thumb-container .thumb-unit {
+        width: 50%;
+        padding-top: 26%; } }
+    .thumb-container .thumb-unit .thumb-overlay {
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      right: 0px;
+      height: 100%;
+      text-align: center;
+      background: rgba(225, 193, 132, 0.9);
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: space-around; }
+      .thumb-container .thumb-unit .thumb-overlay strong {
+        display: block;
+        padding: 0 20px;
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 24px; }
+    .thumb-container .thumb-unit:hover .thumb-overlay {
+      position: absolute;
+      top: 0%;
+      left: 0px;
+      right: 0px; }
