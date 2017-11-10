@@ -1,5 +1,9 @@
 $(document).ready(function(){
+	
 	smoothScrool(1000);
+	
+	learnBelt();
+	
 });
 
 function smoothScrool(duration){
@@ -16,4 +20,20 @@ function smoothScrool(duration){
 		}
 		
 	});
+}
+
+function learnBelt(){
+	
+	$('.thumb-unit').click(function(){
+		
+		$('.learn-belt').css('left','-100%');
+		
+	});
+	
+	$('.learn-return').click(function(){
+		
+		$('.learn-belt').css('left','0%');
+		
+	});
+	
 }
