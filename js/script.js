@@ -4,6 +4,7 @@ $(document).ready(function(){
 	
 	learnBelt();
 	
+	learnLoad();
 });
 
 function smoothScrool(duration){
@@ -27,12 +28,32 @@ function learnBelt(){
 	$('.thumb-unit').click(function(){
 		
 		$('.learn-belt').css('left','-100%');
+		$('.learn-container').show();
 		
 	});
 	
 	$('.learn-return').click(function(){
 		
 		$('.learn-belt').css('left','0%');
+		$('.learn-container').hide(800);
+		
+	});
+	
+}
+
+function learnLoad(){
+	
+	$.ajaxSetup({ cache: true });
+	
+	$('.thumb-unit').click(function(){
+		
+		var newTitle = $(this).find('strong').text(),
+			fileName = $(this).attr('title'),
+			spinner ='<div class="loader">Loading...</div>',
+			newHTML ='./learn/'+fileName+'.html';
+		
+		$('.project-load').html(spinner).load(newHTML);
+		$('.project-title').text(newTitle);
 		
 	});
 	
